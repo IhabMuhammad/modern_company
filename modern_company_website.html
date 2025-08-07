@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCorp - Innovative Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="background-canvas"></canvas>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">TechCorp</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link" data-en="About" data-ar="حول">About</a></li>
+                <li><a href="#" onclick="showPage('services')" class="nav-link" data-en="Services" data-ar="خدمات">Services</a></li>
+                <li><a href="#" onclick="showPage('contact')" class="nav-link" data-en="Contact" data-ar="اتصال">Contact</a></li>
+            </ul>
+            <div class="controls">
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button class="lang-toggle" onclick="toggleLanguage()" data-en="العربية" data-ar="English">العربية</button>
+                <button class="mobile-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 data-en="Innovative Solutions for Tomorrow" data-ar="حلول مبتكرة للغد">Innovative Solutions for Tomorrow</h1>
+                    <p data-en="Empowering businesses with cutting-edge technology and unparalleled expertise to drive growth and success in the digital age." data-ar="تمكين الشركات بالتكنولوجيا المتطورة والخبرة المتميزة لدفع النمو والنجاح في العصر الرقمي.">Empowering businesses with cutting-edge technology and unparalleled expertise to drive growth and success in the digital age.</p>
+                    <a href="#" onclick="showPage('services')" class="cta-button" data-en="Explore Services" data-ar="استكشف الخدمات">Explore Services</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 data-en="Why Choose TechCorp?" data-ar="لماذا تختار تك كورب؟">Why Choose TechCorp?</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 data-en="Innovation" data-ar="الابتكار">Innovation</h3>
+                        <p data-en="Leading the industry with breakthrough technologies and forward-thinking solutions that transform businesses." data-ar="نقود الصناعة بتقنيات رائدة وحلول مستقبلية تحول الأعمال.">Leading the industry with breakthrough technologies and forward-thinking solutions that transform businesses.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Reliability" data-ar="الموثوقية">Reliability</h3>
+                        <p data-en="Trusted by thousands of clients worldwide for consistent, high-quality deliverables and exceptional service." data-ar="موثوق به من قبل آلاف العملاء حول العالم لتقديم خدمات عالية الجودة واستثنائية.">Trusted by thousands of clients worldwide for consistent, high-quality deliverables and exceptional service.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Scalability" data-ar="القابلية للتوسع">Scalability</h3>
+                        <p data-en="Solutions that grow with your business, from startup to enterprise, ensuring long-term success and adaptability." data-ar="حلول تنمو مع أعمالك، من الشركات الناشئة إلى المؤسسات، لضمان النجاح والتكيف طويل المدى.">Solutions that grow with your business, from startup to enterprise, ensuring long-term success and adaptability.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <!-- Company Overview Section -->
+            <section class="section">
+                <h2 data-en="About TechCorp" data-ar="حول تك كورب">About TechCorp</h2>
+                <p data-en="Founded in 2010, TechCorp has been at the forefront of technological innovation, helping businesses navigate the digital landscape with confidence and success." data-ar="تأسست تك كورب في عام 2010، وكانت في المقدمة في مجال الابتكار التكنولوجي، مساعدة الشركات على التنقل في المشهد الرقمي بثقة ونجاح.">Founded in 2010, TechCorp has been at the forefront of technological innovation, helping businesses navigate the digital landscape with confidence and success.</p>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 data-en="Our Mission" data-ar="مهمتنا">Our Mission</h3>
+                        <p data-en="To empower businesses worldwide through innovative technology solutions that drive growth, efficiency, and competitive advantage in an ever-evolving digital marketplace." data-ar="تمكين الشركات حول العالم من خلال حلول تقنية مبتكرة تدفع النمو والكفاءة والميزة التنافسية في السوق الرقمية المتطورة باستمرار.">To empower businesses worldwide through innovative technology solutions that drive growth, efficiency, and competitive advantage in an ever-evolving digital marketplace.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h3>
+                        <p data-en="To be the global leader in transformative technology solutions, creating a future where businesses thrive through seamless integration of cutting-edge innovations." data-ar="أن نكون الرائد العالمي في حلول التكنولوجيا التحويلية، وخلق مستقبل حيث تزدهر الشركات من خلال التكامل السلس للابتكارات المتطورة.">To be the global leader in transformative technology solutions, creating a future where businesses thrive through seamless integration of cutting-edge innovations.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Our Values" data-ar="قيمنا">Our Values</h3>
+                        <p data-en="Excellence, Innovation, Integrity, and Customer Success form the foundation of everything we do, guiding our commitment to delivering outstanding results." data-ar="التميز والابتكار والنزاهة ونجاح العملاء يشكلون أساس كل ما نقوم به، ويوجهون التزامنا بتقديم نتائج متميزة.">Excellence, Innovation, Integrity, and Customer Success form the foundation of everything we do, guiding our commitment to delivering outstanding results.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Our Team" data-ar="فريقنا">Our Team</h3>
+                        <p data-en="Over 500 dedicated professionals worldwide, combining expertise in technology, design, and business strategy to deliver comprehensive solutions." data-ar="أكثر من 500 محترف مكرس حول العالم، يجمعون الخبرة في التكنولوجيا والتصميم واستراتيجية الأعمال لتقديم حلول شاملة.">Over 500 dedicated professionals worldwide, combining expertise in technology, design, and business strategy to deliver comprehensive solutions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Company History Section -->
+            <section class="section">
+                <h2 data-en="Our Journey" data-ar="رحلتنا">Our Journey</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h3 data-en="Company Founded" data-ar="تأسيس الشركة">Company Founded</h3>
+                            <p data-en="TechCorp was established with a vision to bridge the gap between traditional business practices and cutting-edge technology solutions." data-ar="تأسست تك كورب برؤية لسد الفجوة بين ممارسات الأعمال التقليدية وحلول التكنولوجيا المتطورة.">TechCorp was established with a vision to bridge the gap between traditional business practices and cutting-edge technology solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-content">
+                            <h3 data-en="Global Expansion" data-ar="التوسع العالمي">Global Expansion</h3>
+                            <p data-en="Opened offices in 12 countries and established partnerships with leading technology companies worldwide." data-ar="افتتحت مكاتب في 12 دولة وأقامت شراكات مع شركات التكنولوجيا الرائدة في جميع أنحاء العالم.">Opened offices in 12 countries and established partnerships with leading technology companies worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3 data-en="AI Innovation" data-ar="ابتكار الذكاء الاصطناعي">AI Innovation</h3>
+                            <p data-en="Launched our AI division and developed proprietary machine learning algorithms that revolutionized business automation." data-ar="أطلقت قسم الذكاء الاصطناعي وطورت خوارزميات التعلم الآلي المملوكة التي ثورت أتمتة الأعمال.">Launched our AI division and developed proprietary machine learning algorithms that revolutionized business automation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            <h3 data-en="Future Ready" data-ar="جاهزون للمستقبل">Future Ready</h3>
+                            <p data-en="Continuing to lead the industry with quantum computing research and sustainable technology solutions." data-ar="نواصل قيادة الصناعة بأبحاث الحوسبة الكمية وحلول التكنولوجيا المستدامة.">Continuing to lead the industry with quantum computing research and sustainable technology solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leadership Team Section -->
+            <section class="section">
+                <h2 data-en="Leadership Team" data-ar="فريق القيادة">Leadership Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">JD</div>
+                        <h3>John Doe</h3>
+                        <p class="member-title" data-en="CEO & Founder" data-ar="الرئيس التنفيذي والمؤسس">CEO & Founder</p>
+                        <p class="member-bio" data-en="Visionary leader with 20+ years in technology and business transformation." data-ar="قائد رؤيوي مع أكثر من 20 عامًا في التكنولوجيا وتحول الأعمال.">Visionary leader with 20+ years in technology and business transformation.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">AS</div>
+                        <h3>Alice Smith</h3>
+                        <p class="member-title" data-en="CTO" data-ar="المدير التقني">CTO</p>
+                        <p class="member-bio" data-en="Technology innovator specializing in AI, cloud computing, and scalable architectures." data-ar="مبتكر تقني متخصص في الذكاء الاصطناعي والحوسبة السحابية والهياكل القابلة للتوسع.">Technology innovator specializing in AI, cloud computing, and scalable architectures.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">MJ</div>
+                        <h3>Michael Johnson</h3>
+                        <p class="member-title" data-en="VP of Operations" data-ar="نائب رئيس العمليات">VP of Operations</p>
+                        <p class="member-bio" data-en="Operations expert ensuring seamless project delivery and client satisfaction globally." data-ar="خبير عمليات يضمن تسليم المشاريع بسلاسة ورضا العملاء عالميًا.">Operations expert ensuring seamless project delivery and client satisfaction globally.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">SD</div>
+                        <h3>Sarah Davis</h3>
+                        <p class="member-title" data-en="Head of Design" data-ar="رئيس التصميم">Head of Design</p>
+                        <p class="member-bio" data-en="Creative director crafting exceptional user experiences and innovative design solutions." data-ar="مدير إبداعي يصنع تجارب مستخدم استثنائية وحلول تصميم مبتكرة.">Creative director crafting exceptional user experiences and innovative design solutions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="section">
+                <h2 data-en="Our Impact" data-ar="تأثيرنا">Our Impact</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label" data-en="Projects Completed" data-ar="مشروع مكتمل">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label" data-en="Happy Clients" data-ar="عميل سعيد">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label" data-en="Team Members" data-ar="عضو فريق">Team Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label" data-en="Years Experience" data-ar="سنة خبرة">Years Experience</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Page -->
+        <div id="services" class="page">
+            <!-- Services Overview Section -->
+            <section class="section">
+                <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+                <p data-en="Comprehensive technology solutions tailored to meet your unique business needs and drive sustainable growth." data-ar="حلول تقنية شاملة مصممة لتلبية احتياجات أعمالك الفريدة ودفع النمو المستدام.">Comprehensive technology solutions tailored to meet your unique business needs and drive sustainable growth.</p>
+                
+                <div class="cards-grid">
+                    <div class="card service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3 data-en="Web Development" data-ar="تطوير المواقع">Web Development</h3>
+                        <p data-en="Custom web applications and websites built with modern frameworks, responsive design, and optimal performance across all devices and platforms." data-ar="تطبيقات ومواقع ويب مخصصة مبنية بأطر عمل حديثة وتصميم متجاوب وأداء مثالي عبر جميع الأجهزة والمنصات.">Custom web applications and websites built with modern frameworks, responsive design, and optimal performance across all devices and platforms.</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="React" data-ar="ريأكت">React</span>
+                            <span class="feature-tag" data-en="Node.js" data-ar="نود.جي.إس">Node.js</span>
+                            <span class="feature-tag" data-en="Progressive Web Apps" data-ar="تطبيقات الويب التقدمية">PWA</span>
+                        </div>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-icon">📱</div>
+                        <h3 data-en="Mobile Apps" data-ar="تطبيقات الهاتف">Mobile Apps</h3>
+                        <p data-en="Native and cross-platform mobile applications that deliver exceptional user experiences and seamless functionality on iOS and Android devices." data-ar="تطبيقات الهاتف المحمول الأصلية ومتعددة المنصات التي توفر تجارب مستخدم استثنائية ووظائف سلسة على أجهزة iOS و Android.">Native and cross-platform mobile applications that deliver exceptional user experiences and seamless functionality on iOS and Android devices.</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="React Native" data-ar="ريأكت نيتف">React Native</span>
+                            <span class="feature-tag" data-en="Flutter" data-ar="فلتر">Flutter</span>
+                            <span class="feature-tag" data-en="Swift" data-ar="سويفت">Swift</span>
+                        </div>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-icon">☁️</div>
+                        <h3 data-en="Cloud Solutions" data-ar="الحلول السحابية">Cloud Solutions</h3>
+                        <p data-en="Scalable cloud infrastructure and migration services that ensure security, reliability, and cost-effectiveness for your business operations." data-ar="بنية تحتية سحابية قابلة للتوسع وخدمات الهجرة التي تضمن الأمان والموثوقية والفعالية من حيث التكلفة لعمليات أعمالك.">Scalable cloud infrastructure and migration services that ensure security, reliability, and cost-effectiveness for your business operations.</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="AWS" data-ar="أمازون">AWS</span>
+                            <span class="feature-tag" data-en="Azure" data-ar="أزور">Azure</span>
+                            <span class="feature-tag" data-en="Google Cloud" data-ar="جوجل كلاود">GCP</span>
+                        </div>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3 data-en="AI & Analytics" data-ar="الذكاء الاصطناعي والتحليلات">AI & Analytics</h3>
+                        <p data-en="Advanced AI solutions and data analytics tools that provide actionable insights and automate complex business processes for improved efficiency." data-ar="حلول ذكاء اصطناعي متقدمة وأدوات تحليل البيانات التي توفر رؤى قابلة للتنفيذ وتؤتمت العمليات التجارية المعقدة لتحسين الكفاءة.">Advanced AI solutions and data analytics tools that provide actionable insights and automate complex business processes for improved efficiency.</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="Machine Learning" data-ar="التعلم الآلي">ML</span>
+                            <span class="feature-tag" data-en="Data Science" data-ar="علوم البيانات">Data Science</span>
+                            <span class="feature-tag" data-en="Automation" data-ar="الأتمتة">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="section">
+                <h2 data-en="Our Process" data-ar="عمليتنا">Our Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3 data-en="Discovery" data-ar="الاستكشاف">Discovery</h3>
+                            <p data-en="We begin by understanding your business goals, challenges, and requirements through comprehensive consultation and analysis." data-ar="نبدأ بفهم أهداف أعمالك وتحدياتها ومتطلباتها من خلال الاستشارة والتحليل الشاملين.">We begin by understanding your business goals, challenges, and requirements through comprehensive consultation and analysis.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3 data-en="Strategy" data-ar="الاستراتيجية">Strategy</h3>
+                            <p data-en="Our experts develop a tailored strategy and roadmap that aligns with your objectives and maximizes return on investment." data-ar="يطور خبراؤنا استراتيجية وخريطة طريق مخصصة تتماشى مع أهدافك وتزيد من العائد على الاستثمار.">Our experts develop a tailored strategy and roadmap that aligns with your objectives and maximizes return on investment.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3 data-en="Development" data-ar="التطوير">Development</h3>
+                            <p data-en="We implement the solution using best practices, cutting-edge technologies, and agile methodologies for optimal results." data-ar="ننفذ الحل باستخدام أفضل الممارسات والتقنيات المتطورة والمنهجيات المرنة للحصول على أفضل النتائج.">We implement the solution using best practices, cutting-edge technologies, and agile methodologies for optimal results.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3 data-en="Launch & Support" data-ar="الإطلاق والدعم">Launch & Support</h3>
+                            <p data-en="After successful deployment, we provide ongoing support, maintenance, and optimization to ensure long-term success." data-ar="بعد النشر الناجح، نوفر الدعم المستمر والصيانة والتحسين لضمان النجاح طويل المدى.">After successful deployment, we provide ongoing support, maintenance, and optimization to ensure long-term success.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="section">
+                <h2 data-en="Service Packages" data-ar="باقات الخدمات">Service Packages</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 data-en="Starter" data-ar="المبتدئ">Starter</h3>
+                        <div class="price">$2,999</div>
+                        <div class="price-period" data-en="Per Project" data-ar="لكل مشروع">Per Project</div>
+                        <ul class="pricing-features">
+                            <li data-en="Custom Website Design" data-ar="تصميم موقع مخصص">Custom Website Design</li>
+                            <li data-en="Responsive Development" data-ar="تطوير متجاوب">Responsive Development</li>
+                            <li data-en="Basic SEO Setup" data-ar="إعداد SEO أساسي">Basic SEO Setup</li>
+                            <li data-en="30 Days Support" data-ar="دعم لمدة 30 يوم">30 Days Support</li>
+                        </ul>
+                        <button class="pricing-button" data-en="Get Started" data-ar="ابدأ">Get Started</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="popular-badge" data-en="Most Popular" data-ar="الأكثر شعبية">Most Popular</div>
+                        <h3 data-en="Professional" data-ar="المحترف">Professional</h3>
+                        <div class="price">$7,999</div>
+                        <div class="price-period" data-en="Per Project" data-ar="لكل مشروع">Per Project</div>
+                        <ul class="pricing-features">
+                            <li data-en="Everything in Starter" data-ar="كل شيء في المبتدئ">Everything in Starter</li>
+                            <li data-en="Advanced Functionality" data-ar="وظائف متقدمة">Advanced Functionality</li>
+                            <li data-en="API Integrations" data-ar="تكاملات API">API Integrations</li>
+                            <li data-en="Performance Optimization" data-ar="تحسين الأداء">Performance Optimization</li>
+                            <li data-en="90 Days Support" data-ar="دعم لمدة 90 يوم">90 Days Support</li>
+                        </ul>
+                        <button class="pricing-button featured" data-en="Get Started" data-ar="ابدأ">Get Started</button>
+                    </div>
+                    <div class="pricing-card">
+                        <h3 data-en="Enterprise" data-ar="المؤسسي">Enterprise</h3>
+                        <div class="price" data-en="Custom" data-ar="مخصص">Custom</div>
+                        <div class="price-period" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</div>
+                        <ul class="pricing-features">
+                            <li data-en="Everything in Professional" data-ar="كل شيء في المحترف">Everything in Professional</li>
+                            <li data-en="Custom Development" data-ar="تطوير مخصص">Custom Development</li>
+                            <li data-en="Dedicated Team" data-ar="فريق مخصص">Dedicated Team</li>
+                            <li data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</li>
+                            <li data-en="SLA Guarantee" data-ar="ضمان اتفاقية الخدمة">SLA Guarantee</li>
+                        </ul>
+                        <button class="pricing-button" data-en="Contact Sales" data-ar="اتصل بالمبيعات">Contact Sales</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies Section -->
+            <section class="section">
+                <h2 data-en="Technologies We Use" data-ar="التقنيات التي نستخدمها">Technologies We Use</h2>
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3 data-en="Frontend" data-ar="الواجهة الأمامية">Frontend</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Next.js</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3 data-en="Backend" data-ar="الخلفية">Backend</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">Go</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3 data-en="Mobile" data-ar="الهاتف المحمول">Mobile</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Xamarin</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3 data-en="Cloud & DevOps" data-ar="السحابة والتطوير">Cloud & DevOps</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+            <section class="section">
+                <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+                <p data-en="Comprehensive technology solutions tailored to meet your unique business needs and drive sustainable growth." data-ar="حلول تقنية شاملة مصممة لتلبية احتياجات أعمالك الفريدة ودفع النمو المستدام.">Comprehensive technology solutions tailored to meet your unique business needs and drive sustainable growth.</p>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 data-en="Web Development" data-ar="تطوير المواقع">Web Development</h3>
+                        <p data-en="Custom web applications and websites built with modern frameworks, responsive design, and optimal performance across all devices and platforms." data-ar="تطبيقات ومواقع ويب مخصصة مبنية بأطر عمل حديثة وتصميم متجاوب وأداء مثالي عبر جميع الأجهزة والمنصات.">Custom web applications and websites built with modern frameworks, responsive design, and optimal performance across all devices and platforms.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Mobile Apps" data-ar="تطبيقات الهاتف">Mobile Apps</h3>
+                        <p data-en="Native and cross-platform mobile applications that deliver exceptional user experiences and seamless functionality on iOS and Android devices." data-ar="تطبيقات الهاتف المحمول الأصلية ومتعددة المنصات التي توفر تجارب مستخدم استثنائية ووظائف سلسة على أجهزة iOS و Android.">Native and cross-platform mobile applications that deliver exceptional user experiences and seamless functionality on iOS and Android devices.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Cloud Solutions" data-ar="الحلول السحابية">Cloud Solutions</h3>
+                        <p data-en="Scalable cloud infrastructure and migration services that ensure security, reliability, and cost-effectiveness for your business operations." data-ar="بنية تحتية سحابية قابلة للتوسع وخدمات الهجرة التي تضمن الأمان والموثوقية والفعالية من حيث التكلفة لعمليات أعمالك.">Scalable cloud infrastructure and migration services that ensure security, reliability, and cost-effectiveness for your business operations.</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="AI & Analytics" data-ar="الذكاء الاصطناعي والتحليلات">AI & Analytics</h3>
+                        <p data-en="Advanced AI solutions and data analytics tools that provide actionable insights and automate complex business processes for improved efficiency." data-ar="حلول ذكاء اصطناعي متقدمة وأدوات تحليل البيانات التي توفر رؤى قابلة للتنفيذ وتؤتمت العمليات التجارية المعقدة لتحسين الكفاءة.">Advanced AI solutions and data analytics tools that provide actionable insights and automate complex business processes for improved efficiency.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="section">
+                <h2 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+                <p data-en="Ready to transform your business? Get in touch with our team of experts and let's discuss how we can help you achieve your goals." data-ar="هل أنت مستعد لتحويل أعمالك؟ تواصل مع فريق خبرائنا ودعنا نناقش كيف يمكننا مساعدتك في تحقيق أهدافك.">Ready to transform your business? Get in touch with our team of experts and let's discuss how we can help you achieve your goals.</p>
+                
+                <div class="form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-en="Company (Optional)" data-ar="الشركة (اختياري)">Company (Optional)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" data-en="Service Interest" data-ar="الخدمة المهتم بها">Service Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
+                                <option value="web-dev" data-en="Web Development" data-ar="تطوير المواقع">Web Development</option>
+                                <option value="mobile-apps" data-en="Mobile Apps" data-ar="تطبيقات الهاتف">Mobile Apps</option>
+                                <option value="cloud" data-en="Cloud Solutions" data-ar="الحلول السحابية">Cloud Solutions</option>
+                                <option value="ai" data-en="AI & Analytics" data-ar="الذكاء الاصطناعي والتحليلات">AI & Analytics</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-en="Message" data-ar="الرسالة">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button" data-en="Send Message" data-ar="إرسال الرسالة">
+                            <span class="button-text">Send Message</span>
+                            <span class="loading" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="cards-grid" style="margin-top: 3rem;">
+                    <div class="card">
+                        <h3 data-en="Email" data-ar="البريد الإلكتروني">Email</h3>
+                        <p>contact@techcorp.com</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Phone" data-ar="الهاتف">Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="card">
+                        <h3 data-en="Address" data-ar="العنوان">Address</h3>
+                        <p data-en="123 Innovation Drive, Tech City, TC 12345" data-ar="123 طريق الابتكار، مدينة التقنية، TC 12345">123 Innovation Drive, Tech City, TC 12345</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 TechCorp. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
